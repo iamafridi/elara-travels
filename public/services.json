@@ -1,0 +1,436 @@
+[
+    {
+      "image_url": "https://i.ibb.co/7zFxk7S/destination1.jpg",
+      "name": "Rocky Mountains",
+      "type": "Mountains",
+      "country": "United States",
+      "description": "The Rocky Mountains span across the western part of North America, offering breathtaking landscapes, diverse wildlife, and numerous recreational activities such as hiking, skiing, and mountain biking.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/RBhX9Vm/destination2.jpg",
+      "name": "Yellowstone National Park",
+      "type": "Camping",
+      "country": "United States",
+      "description": "Yellowstone National Park is known for its geothermal features, including geysers and hot springs, as well as diverse wildlife like bears and bison. It offers various camping sites amidst stunning natural beauty.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/ZBxJx62/destination3.jpg",
+      "name": "Amazon River",
+      "type": "River",
+      "country": "South America (Brazil, Peru, Colombia)",
+      "description": "The Amazon River is the largest river in the world, flowing through dense rainforests and supporting a rich ecosystem. Visitors can explore the river on boat tours, witnessing unique wildlife and indigenous cultures.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/g645QzX/destination4.jpg",
+      "name": "Swiss Alps",
+      "type": "Mountains",
+      "country": "Switzerland",
+      "description": "The Swiss Alps boast stunning peaks, charming villages, and world-class skiing resorts. Visitors can enjoy hiking trails, scenic train rides, and indulge in the picturesque beauty of the alpine landscapes.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/xYWdZfd/destination5.jpg",
+      "name": "Lake District National Park",
+      "type": "Camping",
+      "country": "United Kingdom",
+      "description": "The Lake District offers serene lakes, lush green valleys, and rugged mountains, perfect for camping enthusiasts. It's a haven for outdoor activities like kayaking, hiking, and enjoying the peaceful countryside.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/SJmN9y2/destination6.png",
+      "name": "Danube River",
+      "type": "River",
+      "country": "Europe (Germany, Austria, Hungary)",
+      "description": "The Danube River flows through multiple European countries, offering picturesque landscapes, historic cities along its banks, and opportunities for river cruises to explore the cultural richness and beauty of Europe.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+        "image_url": "https://i.ibb.co/vzyCW0H/destination7.jpg",
+        "name": "Cancun Beaches",
+        "type": "Beach",
+        "country": "Mexico",
+        "description": "Cancun boasts pristine white sandy beaches and crystal-clear waters, making it a paradise for beach lovers. With vibrant nightlife and water activities like snorkeling and diving, it's a perfect getaway.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/JzFKZCH/destination8.jpg",
+        "name": "Maasai Mara National Reserve",
+        "type": "Safari",
+        "country": "Kenya",
+        "description": "The Maasai Mara is renowned for its incredible wildlife and the annual wildebeest migration. Visitors can experience thrilling safaris and witness the Big Five in their natural habitat.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/9v487z3/banner1.jpg",
+        "name": "Paris",
+        "type": "City",
+        "country": "France",
+        "description": "Paris, the 'City of Lights,' is famous for its iconic landmarks like the Eiffel Tower, Louvre Museum, and exquisite cuisine. It's a blend of history, art, and romance.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/VvmbHf1/banner2.jpg",
+        "name": "Machu Picchu",
+        "type": "Historical",
+        "country": "Peru",
+        "description": "Machu Picchu, a UNESCO World Heritage Site, is an ancient Incan city nestled in the Andes mountains. It offers a glimpse into the rich history and architectural marvels of the Incas.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/qB2p5Ct/banner4.jpg",
+        "name": "Bora Bora",
+        "type": "Island",
+        "country": "French Polynesia",
+        "description": "Bora Bora is a tropical paradise with stunning turquoise lagoons and luxurious overwater bungalows. It's an ideal destination for a romantic retreat or a relaxing getaway.",
+        "price_per_day": {
+          "2-3_days": "$500 - $700",
+          "4-7_days": "$800 - $1200",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/QrfSTQh/banner5.jpg",
+        "name": "Himalayas",
+        "type": "Mountains",
+        "country": "Nepal, India, Bhutan",
+        "description": "The Himalayas, the world's highest mountain range, offer breathtaking landscapes and diverse cultures. Trekking routes like Everest Base Camp attract adventure enthusiasts.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/6nXyctP/banner6.jpg",
+        "name": "Neuschwanstein Castle",
+        "type": "Historical",
+        "country": "Germany",
+        "description": "Neuschwanstein Castle is a fairytale-like palace nestled in the Bavarian Alps. Known for its stunning architecture and picturesque surroundings, it's a symbol of romanticism.",
+        "price_per_day": {
+          "2-3_days": "$150 - $200",
+          "4-7_days": "$250 - $350",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/sbs4SKX/banner7.jpg",
+        "name": "Caribbean Cruise",
+        "type": "Cruise",
+        "country": "Various Caribbean Islands",
+        "description": "A Caribbean cruise offers an escape to multiple stunning islands with beautiful beaches, vibrant cultures, and exciting activities like snorkeling and island hopping.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/qp5Tf9m/banner8.jpg",
+        "name": "Angkor Wat",
+        "type": "Historical",
+        "country": "Cambodia",
+        "description": "Angkor Wat is a UNESCO World Heritage Site and the largest religious monument in the world. It's a stunning display of Khmer architecture and ancient history.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/ZBxJx62/destination3.jpg",
+        "name": "Napa Valley",
+        "type": "Winery",
+        "country": "United States",
+        "description": "Napa Valley is renowned for its world-class wineries and scenic vineyards. Visitors can enjoy wine tasting tours and culinary delights amidst beautiful landscapes.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/xYWdZfd/destination5.jpg",
+        "name": "Northern Lights",
+        "type": "Natural Phenomenon",
+        "country": "Norway, Iceland, Finland",
+        "description": "The Northern Lights, or Aurora Borealis, offer a mesmerizing natural light show in the polar regions. It's a magical experience under the dancing colorful skies.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/vzyCW0H/destination7.jpg",
+        "name": "Andes Mountains",
+        "type": "Mountains",
+        "country": "South America (Chile, Argentina, Peru)",
+        "description": "The Andes, the longest continental mountain range, offer stunning landscapes, ancient ruins, and diverse ecosystems. Trekking and outdoor adventures abound in this region.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      },
+    {
+      "image_url": "https://i.ibb.co/7zFxk7S/destination1.jpg",
+      "name": "Rocky Mountains",
+      "type": "Mountains",
+      "country": "United States",
+      "description": "The Rocky Mountains span across the western part of North America, offering breathtaking landscapes, diverse wildlife, and numerous recreational activities such as hiking, skiing, and mountain biking.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/RBhX9Vm/destination2.jpg",
+      "name": "Yellowstone National Park",
+      "type": "Camping",
+      "country": "United States",
+      "description": "Yellowstone National Park is known for its geothermal features, including geysers and hot springs, as well as diverse wildlife like bears and bison. It offers various camping sites amidst stunning natural beauty.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/ZBxJx62/destination3.jpg",
+      "name": "Amazon River",
+      "type": "River",
+      "country": "South America (Brazil, Peru, Colombia)",
+      "description": "The Amazon River is the largest river in the world, flowing through dense rainforests and supporting a rich ecosystem. Visitors can explore the river on boat tours, witnessing unique wildlife and indigenous cultures.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/g645QzX/destination4.jpg",
+      "name": "Swiss Alps",
+      "type": "Mountains",
+      "country": "Switzerland",
+      "description": "The Swiss Alps boast stunning peaks, charming villages, and world-class skiing resorts. Visitors can enjoy hiking trails, scenic train rides, and indulge in the picturesque beauty of the alpine landscapes.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/xYWdZfd/destination5.jpg",
+      "name": "Lake District National Park",
+      "type": "Camping",
+      "country": "United Kingdom",
+      "description": "The Lake District offers serene lakes, lush green valleys, and rugged mountains, perfect for camping enthusiasts. It's a haven for outdoor activities like kayaking, hiking, and enjoying the peaceful countryside.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+      "image_url": "https://i.ibb.co/SJmN9y2/destination6.png",
+      "name": "Danube River",
+      "type": "River",
+      "country": "Europe (Germany, Austria, Hungary)",
+      "description": "The Danube River flows through multiple European countries, offering picturesque landscapes, historic cities along its banks, and opportunities for river cruises to explore the cultural richness and beauty of Europe.",
+      "price_per_day": {
+        "2-3_days": "$220 - $250",
+        "4-7_days": "$400 - $500",
+        "7+_days": "Contact for pricing"
+      }
+    },
+    {
+        "image_url": "https://i.ibb.co/vzyCW0H/destination7.jpg",
+        "name": "Cancun Beaches",
+        "type": "Beach",
+        "country": "Mexico",
+        "description": "Cancun boasts pristine white sandy beaches and crystal-clear waters, making it a paradise for beach lovers. With vibrant nightlife and water activities like snorkeling and diving, it's a perfect getaway.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/JzFKZCH/destination8.jpg",
+        "name": "Maasai Mara National Reserve",
+        "type": "Safari",
+        "country": "Kenya",
+        "description": "The Maasai Mara is renowned for its incredible wildlife and the annual wildebeest migration. Visitors can experience thrilling safaris and witness the Big Five in their natural habitat.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/9v487z3/banner1.jpg",
+        "name": "Paris",
+        "type": "City",
+        "country": "France",
+        "description": "Paris, the 'City of Lights,' is famous for its iconic landmarks like the Eiffel Tower, Louvre Museum, and exquisite cuisine. It's a blend of history, art, and romance.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/VvmbHf1/banner2.jpg",
+        "name": "Machu Picchu",
+        "type": "Historical",
+        "country": "Peru",
+        "description": "Machu Picchu, a UNESCO World Heritage Site, is an ancient Incan city nestled in the Andes mountains. It offers a glimpse into the rich history and architectural marvels of the Incas.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/qB2p5Ct/banner4.jpg",
+        "name": "Bora Bora",
+        "type": "Island",
+        "country": "French Polynesia",
+        "description": "Bora Bora is a tropical paradise with stunning turquoise lagoons and luxurious overwater bungalows. It's an ideal destination for a romantic retreat or a relaxing getaway.",
+        "price_per_day": {
+          "2-3_days": "$500 - $700",
+          "4-7_days": "$800 - $1200",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/QrfSTQh/banner5.jpg",
+        "name": "Himalayas",
+        "type": "Mountains",
+        "country": "Nepal, India, Bhutan",
+        "description": "The Himalayas, the world's highest mountain range, offer breathtaking landscapes and diverse cultures. Trekking routes like Everest Base Camp attract adventure enthusiasts.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/6nXyctP/banner6.jpg",
+        "name": "Neuschwanstein Castle",
+        "type": "Historical",
+        "country": "Germany",
+        "description": "Neuschwanstein Castle is a fairytale-like palace nestled in the Bavarian Alps. Known for its stunning architecture and picturesque surroundings, it's a symbol of romanticism.",
+        "price_per_day": {
+          "2-3_days": "$150 - $200",
+          "4-7_days": "$250 - $350",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/sbs4SKX/banner7.jpg",
+        "name": "Caribbean Cruise",
+        "type": "Cruise",
+        "country": "Various Caribbean Islands",
+        "description": "A Caribbean cruise offers an escape to multiple stunning islands with beautiful beaches, vibrant cultures, and exciting activities like snorkeling and island hopping.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/qp5Tf9m/banner8.jpg",
+        "name": "Angkor Wat",
+        "type": "Historical",
+        "country": "Cambodia",
+        "description": "Angkor Wat is a UNESCO World Heritage Site and the largest religious monument in the world. It's a stunning display of Khmer architecture and ancient history.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/ZBxJx62/destination3.jpg",
+        "name": "Napa Valley",
+        "type": "Winery",
+        "country": "United States",
+        "description": "Napa Valley is renowned for its world-class wineries and scenic vineyards. Visitors can enjoy wine tasting tours and culinary delights amidst beautiful landscapes.",
+        "price_per_day": {
+          "2-3_days": "$250 - $350",
+          "4-7_days": "$400 - $600",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/xYWdZfd/destination5.jpg",
+        "name": "Northern Lights",
+        "type": "Natural Phenomenon",
+        "country": "Norway, Iceland, Finland",
+        "description": "The Northern Lights, or Aurora Borealis, offer a mesmerizing natural light show in the polar regions. It's a magical experience under the dancing colorful skies.",
+        "price_per_day": {
+          "2-3_days": "$300 - $400",
+          "4-7_days": "$500 - $700",
+          "7+_days": "Contact for pricing"
+        }
+      },
+      {
+        "image_url": "https://i.ibb.co/vzyCW0H/destination7.jpg",
+        "name": "Andes Mountains",
+        "type": "Mountains",
+        "country": "South America (Chile, Argentina, Peru)",
+        "description": "The Andes, the longest continental mountain range, offer stunning landscapes, ancient ruins, and diverse ecosystems. Trekking and outdoor adventures abound in this region.",
+        "price_per_day": {
+          "2-3_days": "$200 - $300",
+          "4-7_days": "$350 - $500",
+          "7+_days": "Contact for pricing"
+        }
+      }
+
+  ]
+  
