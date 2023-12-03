@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Emily Johnson",
+        "rating": 4.5,
+        "details": "Absolutely incredible service! The tour planning was impeccable, ensuring we experienced the best of every destination. The hospitality was top-notch, and their selection of places to visit exceeded our expectations. Would highly recommend!"
+    },
+    {
+        "id": 2,
+        "name": "Michael Thompson",
+        "rating": 4.5,
+        "details": "I had an amazing experience with this tourism company. Their attention to detail in planning the tour was impressive. The staff's hospitality made the trip even more enjoyable. The selection of places showcased the beauty and diversity of each location."
+    },
+    {
+        "id": 3,
+        "name": "Sophie Martinez",
+        "rating": 4,
+        "details": "The service provided by this tourism agency was exceptional. The tour planning was seamless, ensuring a hassle-free trip. The hospitality of the guides was remarkable. The selection of places perfectly captured the essence of each destination."
+    },
+    {
+        "id": 4,
+        "name": "Alexandre Dubois",
+        "rating": 4.5,
+        "details": "Great tour planning and organization! The team went above and beyond to make our trip memorable. The hospitality was warm and welcoming. The places chosen for the tour were breathtaking and provided an enriching experience."
+    },
+    {
+        "id": 5,
+        "name": "Amanda Rodriguez",
+        "rating": 4,
+        "details": "Had a fantastic trip with this tourism company! The tour planning was well thought out, allowing us to explore diverse locations. The hospitality was excellent, making us feel welcomed throughout the journey. Their selection of places catered to all preferences."
+    },
+    {
+        "id": 6,
+        "name": "David Chen",
+        "rating": 4.9,
+        "details": "Exceptional service and attention to detail! The tour planning was meticulous, ensuring a smooth and enjoyable trip. The hospitality was outstanding, and the guides were knowledgeable. The selection of places offered a great balance between adventure and relaxation."
+    }
+]

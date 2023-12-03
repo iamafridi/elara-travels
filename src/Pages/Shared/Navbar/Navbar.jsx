@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const navLinks = <>
-        <li><a>Item 1</a></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/services'>Our Services</Link></li>
         <li>
             <details>
-                <summary>Parent</summary>
+                <summary>Dashboard</summary>
                 <ul className="p-2">
                     <li><a>Submenu 1</a></li>
                     <li><a>Submenu 2</a></li>
@@ -16,13 +18,13 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar max-w-screen-xl fixed opacity-70 text-white z-10 bg-black">
+            <div className="navbar max-w-screen-xl fixed bg-opacity-30 z-10 text-white bg-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-900 text-gray-700 rounded-box w-52">
                             {navLinks}
                         </ul>
                     </div>

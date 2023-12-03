@@ -1,7 +1,7 @@
 
 
 const ServiceItem = ({ item }) => {
-    const { name, image_url, type, country, description, price_per_day } = item;
+    const { name, image_url, type, country, description } = item;
 
     return (
         <div>

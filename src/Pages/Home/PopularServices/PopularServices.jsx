@@ -1,20 +1,25 @@
-import { useEffect, useState } from "react";
+
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-import ServiceItem from "../../Shared/ServiceItem/ServiceItem";
+import ServiceItem from "../ServiceItem/ServiceItem";
+import useService from "../../../hooks/useService";
 
 const PopularServices = () => {
-    // Setting on State 
-    const [services, setServices] = useState([]);
+    //    Using Custom Hook
+    const [services] = useService();
+    const popularItems = services.filter(item => item.type === 'Mountains');
 
-    useEffect(() => {
-        fetch('services.json')
-            .then(res => res.json())
-            .then(data => {
-                const popularItems = data.filter(item => item.type === 'Mountains');
+    // // Setting on State 
+    // const [services, setServices] = useState([]);
 
-                setServices(popularItems)
-            })
-    }, [])
+    // useEffect(() => {
+    //     fetch('services.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const popularItems = data.filter(item => item.type === 'Mountains');
+
+    //             setServices(popularItems)
+    //         })
+    // }, [])
 
     return (
         <section>
@@ -25,12 +30,14 @@ const PopularServices = () => {
 
             <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
                 {
-                    services.map(item => <ServiceItem
+                    popularItems.map(item => <ServiceItem
                         key={item.name}
                         item={item}
                     ></ServiceItem>)
                 }
             </div>
+            <button className="btn btn-outline border-0 border-b-4 w-full text-black mt-4">View Full</button>
+
         </section>
     );
 };
