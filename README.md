@@ -1,4 +1,5 @@
-# React + Vite
+# Elara Tourism
+This is a website for Elara tourism that offers tourism service all over the world.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
