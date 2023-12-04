@@ -2,13 +2,14 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
 const Login = () => {
     const capchaRef = useRef(null)
     const [disable, setDisable] = useState(true)
-    const {signIn} = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -21,11 +22,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-        signIn(email,password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-        })
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
 
 
     }
@@ -42,7 +43,9 @@ const Login = () => {
 
     return (
         <div>
-
+            <Helmet>
+                <title>Elara travel | login</title>
+            </Helmet>
             <section className="relative flex flex-wrap lg:h-screen lg:items-center">
                 <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
                     <div className="mx-auto max-w-lg text-center">

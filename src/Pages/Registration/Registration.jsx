@@ -1,20 +1,32 @@
+import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 
 const Registration = () => {
 
 
-    const { register, handleSubmit,  formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { createUser } = useContext(AuthContext);
+
     const onSubmit = data => {
 
         console.log(data)
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
     };
     // console.log(watch("example"))
     return (
         <div>
-
+            <Helmet>
+                <title>Elara travel | Register</title>
+            </Helmet>
 
             <section className="relative flex flex-wrap lg:h-screen lg:items-center">
                 <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
@@ -33,7 +45,7 @@ const Registration = () => {
 
                             <div className="relative">
                                 <input
-                                    type="text" {...register("name",{ required: true })} name="name"
+                                    type="text" {...register("name", { required: true })} name="name"
                                     className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                     placeholder="Enter Your Name"
                                 />
