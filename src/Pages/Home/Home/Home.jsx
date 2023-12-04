@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Category from "../../Category/Category";
+import Category from "../Category/Category";
 import Banner from "../Banner/Banner";
 import Featured from "../Featured/Featured";
 import PopularServices from "../PopularServices/PopularServices";

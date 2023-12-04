@@ -5,6 +5,8 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home/Home";
 import Services from "../Pages/Services/Services";
 import Book from "../Pages/Book/Book/Book";
+import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Registration/Registration";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +25,14 @@ export const router = createBrowserRouter([
         {
           path:'/book/:type',
           element:<Book></Book>
+        },
+        {
+          path:'/login',
+          element:<Login></Login>
+        },
+        {
+          path:'/register',
+          element:<Registration></Registration>
         }
       ]
     },

@@ -19,7 +19,7 @@ const Navbar = () => {
                 </ul>
             </details>
         </li>
-        <li><a>Item 3</a></li>
+        <li><Link to='/login'>Login</Link></li>
     </>
 
     return (

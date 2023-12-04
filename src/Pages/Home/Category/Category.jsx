@@ -3,15 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import img1 from '../../assets/Destinations/destination1.jpg'
-import img2 from '../../assets/Destinations/destination2.jpg'
-import img3 from '../../assets/Destinations/destination3.jpg'
-import img4 from '../../assets/Destinations/destination4.jpg'
-import img5 from '../../assets/Destinations/destination5.jpg'
-import img6 from '../../assets/Destinations/destination6.png'
-import img7 from '../../assets/Destinations/destination7.jpg'
-import img8 from '../../assets/Destinations/destination8.jpg'
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import img1 from '../../../assets/Destinations/destination1.jpg'
+import img2 from '../../../assets/Destinations/destination2.jpg'
+import img3 from '../../../assets/Destinations/destination3.jpg'
+import img4 from '../../../assets/Destinations/destination4.jpg'
+import img5 from '../../../assets/Destinations/destination5.jpg'
+import img6 from '../../../assets/Destinations/destination6.png'
+import img7 from '../../../assets/Destinations/destination7.jpg'
+import img8 from '../../../assets/Destinations/destination8.jpg'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const Category = () => {
     return (
