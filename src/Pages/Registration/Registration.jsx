@@ -1,17 +1,18 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
 const Registration = () => {
 
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const { createUser } = useContext(AuthContext);
-
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
     const onSubmit = data => {
 
         console.log(data)
@@ -19,6 +20,21 @@ const Registration = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        console.log('User Profile info Updated')
+                        reset();
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "User Created Successfully",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate('/');
+                    }).catch((error) => {
+                        console.error(error)
+                    });
             })
     };
     // console.log(watch("example"))
@@ -50,6 +66,36 @@ const Registration = () => {
                                     placeholder="Enter Your Name"
                                 />
                                 {errors.name && <span>This field is required</span>}
+
+                                <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-4 w-4 text-gray-400"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        {/* Photo */}
+                        <div>
+                            <label htmlFor="name" className="sr-only">Photo URL</label>
+
+                            <div className="relative">
+                                <input
+                                    type="text" name="photo"
+                                    className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                                    placeholder="Photo Url"
+                                />
+                                {errors.photoURL && <span>PhotoURL is required</span>}
 
                                 <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
                                     <svg
