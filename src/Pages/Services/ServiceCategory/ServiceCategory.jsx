@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ServiceItem from "../../Home/ServiceItem/ServiceItem";
 import Cover from "../../Shared/Cover/Cover";
 
@@ -13,6 +14,9 @@ const ServiceCategory = ({items, title ,img}) => {
                     ></ServiceItem>)
                 }
             </div>
+            <Link to={`/book/${title}`}>
+            <button className="btn btn-outline border-0 border-b-4 mt-4">Book Now</button>
+            </Link>
         </div>
     );
 };
