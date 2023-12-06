@@ -1,14 +1,16 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import {  FaRegArrowAltCircleRight } from "react-icons/fa";
 
 
 
 const Login = () => {
-    const [disable, setDisable] = useState(true)
+    const [ setDisable] = useState(true)
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -155,12 +157,20 @@ const Login = () => {
                         </div>
                         {/* Login Here */}
                         <div className="flex items-center justify-between">
-                            <p className="text-sm text-gray-500">
-                                No account?
-                                <Link className="underline" to='/register'> Register Here</Link>
-                            </p>
-                            <input disabled={disable} className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" type="submit" value="Login" />
+                        {/*  todo : Disabled : disable */}
+                            <input disabled={false} className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white w-full" type="submit" value="Login" />
 
+                        </div>
+                        <div className="p-10 items-center " >
+                            <div className=" divider text-red-700"> Log in with Social Accounts </div>
+                            <div className="text-center p-2">
+                                <SocialLogin></SocialLogin>
+
+                                <p className="text-sm justify-center flex mt-2 text-gray-500">
+                                No account?
+                                    <Link to='/register' className="underline flex items-center ml-2 text-blue-600 font-bold">  Register Here <FaRegArrowAltCircleRight className="flex  ml-2 " /></Link>
+                                </p>
+                            </div>
                         </div>
                     </form>
                 </div>

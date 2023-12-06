@@ -4,11 +4,14 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 
 
 const Registration = () => {
-
+    const axiosPublic = useAxiosPublic();
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -22,16 +25,28 @@ const Registration = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('User Profile info Updated')
-                        reset();
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "User Created Successfully",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        navigate('/');
+                        // console.log('User Profile info Updated')
+                        // Create User Entry in the DataBase
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "User Created Successfully",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                            })
+
+
                     }).catch((error) => {
                         console.error(error)
                     });
@@ -58,10 +73,10 @@ const Registration = () => {
                         {/* Name */}
                         <div>
                             <label htmlFor="name" className="sr-only">Name</label>
-
+{/* Todo : Require {...register("name", { required: true })} */}
                             <div className="relative">
                                 <input
-                                    type="text" {...register("name", { required: true })} name="name"
+                                    type="text"  name="name"
                                     className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                     placeholder="Enter Your Name"
                                 />
@@ -180,15 +195,24 @@ const Registration = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-between">
-                            <p className="text-sm text-gray-500">
-                                Already Have an account
-                                <Link to='/login' className="underline ml-2"> Login Here</Link>
-                            </p>
+                        <div className="flex items-center justify-between mb-8">
 
-                            <input className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" type="submit" value="Register " />
+
+                            <input className="inline-block w-full rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" type="submit" value="Register " />
+                        </div>
+                        <div className="p-10 items-center " >
+                            <div className=" divider text-red-700"> Log in with Social Accounts </div>
+                            <div className="text-center p-2">
+                                <SocialLogin></SocialLogin>
+
+                                <p className="text-sm justify-center flex mt-2 text-gray-500">
+                                    Already Have an account
+                                    <Link to='/login' className="underline flex items-center ml-2 text-blue-600 font-bold">  Login Here <button><FaArrowAltCircleRight className="flex  ml-2 " /></button></Link>
+                                </p>
+                            </div>
                         </div>
                     </form>
+
                 </div>
 
                 <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
@@ -198,6 +222,7 @@ const Registration = () => {
                         className="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
+
             </section>
         </div>
     );
