@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home/Home";
 import Services from "../Pages/Services/Services";
@@ -11,47 +11,56 @@ import Dashboard from "../Layout/Dashboard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/All Users/AllUsers";
+import Additems from "../Pages/Dashboard/Add Items/Additems";
+import AdminRoute from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout></MainLayout>,
-      children:[
-        {
-            path:'/',
-            element:<Home></Home>
-        },
-        {
-            path:'/services',
-            element: <Services></Services>
-        },
-        {
-          path:'/book/:type',
-          element:<Book></Book>
-        },
-        {
-          path:'/login',
-          element:<Login></Login>
-        },
-        {
-          path:'/register',
-          element:<Registration></Registration>
-        }
-      ]
-    },
-    {
-      path:'dashboard',
-      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-      children:[
-        {
-          path:'cart',
-          element:<Cart></Cart>
-        },
-        {
-          path:'users',
-          element:<AllUsers></AllUsers>
-        }
-      ]
-    }
-  ]);
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/services',
+        element: <Services></Services>
+      },
+      {
+        path: '/book/:type',
+        element: <Book></Book>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Registration></Registration>
+      }
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      // Normal Routes
+
+      {
+        path: 'cart',
+        element: <Cart></Cart>
+      },
+      // Admion Routes
+      {
+        path: 'users',
+        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+      },
+      {
+        path: 'addItems',
+        element: <AdminRoute><Additems></Additems></AdminRoute>
+      }
+    ]
+  }
+]);

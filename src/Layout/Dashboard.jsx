@@ -2,10 +2,12 @@ import { FaAd, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart,
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import { IoMdAddCircle } from "react-icons/io";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     const [cart] = useCart();
-    const isAdmin = true;
+
+    const [isAdmin] = useAdmin();
 
 
     return (
