@@ -1,11 +1,56 @@
 import { useForm } from "react-hook-form";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
+
+// Image Hosting Api 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 const Additems = () => {
-    const { register, handleSubmit } = useForm()
-    const onSubmit = (data) => console.log(data)
+    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
+    const { register, handleSubmit,reset } = useForm()
+    const onSubmit = async(data) => {
+        console.log(data)
+    // Uploading Image to image bb
+    const imageFile ={image: data.image_url[0]}
+    const res = await axiosPublic.post(image_hosting_api,imageFile,{
+        headers:{
+            'content-type': 'multipart/form-data'
+        }
+    });
+    if(res.data.success){
+        // Sending data to the server 
+        const tourItem ={
+            name: data.name,
+            type:data.type,
+            price:parseFloat(data.price),
+            description:data.description,
+            country:data.country,
+            image: res.data.data.display_url
+        }
+        const tourRes = await axiosSecure.post('/services',tourItem)
+        console.log(tourRes.data);
+        if(tourRes.data.insertedId){
+            //  Success pop up here
+            reset();
+            Swal.fire({
+                title: "Tour Service Added!",
+                text: `${data.name} is added to the service`,
+                icon: "success",
+                background:"gray",
+                color:'white',
+                timer: 1000
+              });
+        }
+    }
+    console.log(res.data);
 
+    }
+ 
     return (
         <div>
             <SectionTitle heading={' A New Destination'} subHeading={'What is the exciting place we are adding'}></SectionTitle>
@@ -34,9 +79,9 @@ const Additems = () => {
                             <label className="label">
                                 <span className="label-text">Type *</span>
                             </label>
-                            <select {...register("type")}
+                            <select defaultValue='default' {...register("type")}
                                 className="select select-success w-full ">
-                                <option disabled selected>Select The Destination</option>
+                                <option disabled value='default'>Select The Destination</option>
                                 <option value="Mountains">Mountains</option>
                                 <option value="Camping">Camping</option>
                                 <option value="River">River</option>
@@ -67,15 +112,39 @@ const Additems = () => {
                             <span className="label-text">Description *</span>
                         </label>
                         <textarea {...register('description')}
-                          className="textarea w-full h-32 textarea-success" placeholder="Description Here"></textarea>
+                            className="textarea w-full h-32 textarea-success" placeholder="Description Here"></textarea>
                     </div>
-                    {/* Picture  */}
-                    <div className="my-4 ">
-                        <input {...register('image_url')} 
-                        type="file" className="file-input file-input-bordered file-input-accent w-full max-w-xs" />
+                    <div className="grid grid-cols-2 gap-6 my-4 items-center">
+                        {/* country */}
+                        <div >
+                            <div className="relative h-30">
+                                <select defaultValue='default' {...register("country")}
+                                    className="peer h-30 w-full rounded-xl border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                                    <option disabled value='default'>Select The Country</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="India">India</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="Africa">Africa</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Nepal">Nepal</option>
+                                </select>
+                                <label
+                                    className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                                    Select a Country
+                                </label>
+                            </div>
+                        </div>
+                        {/* Picture  */}
+                        <div className="my-4 ">
+                            <input {...register('image_url')}
+                                type="file" className="file-input file-input-bordered file-input-accent w-full" />
+                        </div>
                     </div>
                     <button className="btn w-full">
-                        Add Destination <FaRegArrowAltCircleRight/>
+                        Add Destination <FaRegArrowAltCircleRight />
                     </button>
                 </form>
             </div>
