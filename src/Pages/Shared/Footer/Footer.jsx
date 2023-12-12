@@ -18,7 +18,7 @@ const Footer = () => {
             className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
             id="email"
             type="email"
-            placeholder="john@doe.com"
+            placeholder="elara@library.com"
           />
 
           <button
@@ -33,8 +33,7 @@ const Footer = () => {
     <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
       <div className="mx-auto max-w-sm lg:max-w-none">
         <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium natus quod eveniet
-          aut perferendis distinctio iusto repudiandae, provident velit earum?
+         Explore the world of books with the Elara Library.
         </p>
 
         <div className="mt-6 flex justify-center gap-4 lg:justify-start">
@@ -196,16 +195,13 @@ const Footer = () => {
 
     <div className="mt-16 border-t border-gray-100 pt-8">
       <p className="text-center text-xs/relaxed text-gray-500">
-        © Company 2022. All rights reserved.
+        © Elara Library 2023. All rights reserved.
 
         <br />
 
-        Created with
-        <a href="" className="text-gray-700 underline transition hover:text-gray-700/75">Laravel</a>
-        and
-        <a href="" className="text-gray-700 underline transition hover:text-gray-700/75"
-          >Laravel Livewire</a
-        >.
+        Created By
+        <a href="" className="text-gray-700 ml-3 underline transition hover:text-gray-700/75"> Afridi Akbar Ifty</a>
+         
       </p>
     </div>
   </div>
