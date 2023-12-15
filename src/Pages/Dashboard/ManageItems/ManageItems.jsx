@@ -3,6 +3,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useService from "../../../hooks/useService";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 const ManageItems = () => {
     const [services, refetch] = useService();
@@ -95,7 +96,9 @@ const ManageItems = () => {
                                     </td>
                                     <td>$ {item.price}</td>
                                     <td>
-                                        <button className="btn btn-ghost btn-lg"><FaEdit /></button>
+                                        <Link to={`/dashboard/updateItem/${item._id}`}>
+                                            <button className="btn btn-ghost btn-lg"><FaEdit /></button>
+                                        </Link>
                                     </td>
                                     <td>
                                         <button
