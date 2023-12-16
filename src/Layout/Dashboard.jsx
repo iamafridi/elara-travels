@@ -1,4 +1,4 @@
-import { FaAd, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers } from "react-icons/fa";
+import { FaAd, FaEnvelope, FaHistory, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import { IoMdAddCircle } from "react-icons/io";
@@ -45,11 +45,12 @@ const Dashboard = () => {
                                 <NavLink to="/book/contact"> <FaEnvelope /> Contact</NavLink>
                             </li></>
                             :
-                            <>   <li>
-                                <NavLink to="/dashboard/userHome"> <FaHome /> User Home</NavLink>
-                            </li>
+                            <>
                                 <li>
-                                    <NavLink to="/dashboard/reservation"> <FaCalendar /> Reservation</NavLink>
+                                    <NavLink to="/dashboard/userHome"> <FaHome /> User Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/paymentHistory"> <FaHistory /> Payment History</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/cart"> <FaShoppingCart /> My Cart ({cart.length})</NavLink>
