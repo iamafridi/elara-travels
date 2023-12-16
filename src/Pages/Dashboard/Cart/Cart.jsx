@@ -1,7 +1,8 @@
-import {  FaTrashAlt } from "react-icons/fa";
+import { FaAmazonPay,FaTrashAlt } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const [cart, refetch] = useCart();
@@ -41,7 +42,12 @@ const Cart = () => {
             <div className="flex justify-evenly mb-8">
                 <h2 className="text-3xl">Tour Bookings : {cart.length}</h2>
                 <h2 className="text-3xl">Due : {totalPrice}</h2>
-                <button className="btn btn-primary">Pay</button>
+                {cart.length ? <Link to='/dashboard/payment'>
+                    <button  className="btn bg-gray-700 text-white hover:text-black rounded-se-full rounded-ee-full">Confirm Tour <FaAmazonPay className="text-2xl" /> </button>
+                </Link>
+                    :
+                    <button disabled className="btn btn-primary">Add Item Pay</button>
+            }
             </div>
             <div className="overflow-x-auto ">
                 <table className="table w-full">

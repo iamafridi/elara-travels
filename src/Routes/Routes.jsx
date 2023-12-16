@@ -15,6 +15,7 @@ import Additems from "../Pages/Dashboard/Add Items/Additems";
 import AdminRoute from "./AdminRoute";
 import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateItem";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -54,7 +55,11 @@ export const router = createBrowserRouter([
         path: 'cart',
         element: <Cart></Cart>
       },
-      // Admion Routes
+      {
+        path: 'payment',
+        element:<Payment></Payment>
+      },
+      // Admion Only Routes
       {
         path: 'users',
         element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
