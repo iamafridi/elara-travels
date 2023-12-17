@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ServiceItem = ({ item }) => {
@@ -39,6 +40,12 @@ const ServiceItem = ({ item }) => {
                     </div>
                 </div>
             </a>
+          <div className="text-center">
+          <Link to={`/book/${type}`}>
+            <button 
+             className="btn btn-outline border-0 border-b-4 mt-4">Book Now</button>
+            </Link>
+          </div>
         </div>
     );
 };

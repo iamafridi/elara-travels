@@ -17,7 +17,7 @@ const UpdateItem = () => {
     // console.log(item);
 
 
-    const { register, handleSubmit, reset } = useForm()
+    const { register, handleSubmit } = useForm()
     const axiosSecure = useAxiosSecure();
     const axiosPublic = useAxiosPublic();
     const onSubmit = async (data) => {
@@ -29,6 +29,7 @@ const UpdateItem = () => {
                 'content-type': 'multipart/form-data'
             }
         });
+       
         if (res.data.success) {
             // Sending data to the server 
             const tourItem = {
@@ -37,8 +38,9 @@ const UpdateItem = () => {
                 price: parseFloat(data.price),
                 description: data.description,
                 country: data.country,
-                image: res.data.data.display_url
+                image_url: res.data.data.display_url
             }
+            console.log(res.data.data.display_url);
             const tourRes = await axiosSecure.patch(`/services/${_id}`, tourItem)
             console.log(tourRes.data);
             if (tourRes.data.modifiedCount > 0) {

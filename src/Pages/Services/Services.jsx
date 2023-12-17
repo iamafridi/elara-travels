@@ -44,51 +44,51 @@ const Services = () => {
             {/*Historical */}
             <ServiceCategory
                 items={Historical}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Natural History: Unveiling Nature's Majesty"}
                 img={NaturalPhenomenonImg}
             ></ServiceCategory>
             {/*Island */}
             <ServiceCategory
                 items={Island}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={" Wild Islands: Unveiling Nature's Majesty"}
                 img={Islandimg}
             ></ServiceCategory>
             {/*WInary */}
             <ServiceCategory
                 items={Winery}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Lose Yourself in the winery : Unveiling Nature's Majesty"}
                 img={Islandimg}
             ></ServiceCategory>
             
             {/*Camping */}
             <ServiceCategory
                 items={Camping}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Wild live in the Camp Household: Unveiling Nature's Majesty"}
                 img={CityImg}
             ></ServiceCategory>
 
             {/*Beach */}
             <ServiceCategory
                 items={Beach}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"See the Sea beauty : Unveiling Beach Mystery"}
                 img={BeachImg}
             ></ServiceCategory>
             {/*Natural Phenomena */}
             <ServiceCategory
                 items={NaturalPhenomenon}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Embark the Natural Phenomenon: Unveiling Nature's Majesty"}
                 img={NaturalPhenomenonImg}
             ></ServiceCategory>
             {/*Cruise Phenomena */}
             <ServiceCategory
                 items={Cruise}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Enjoy The Golden Breeze In The Sea : Unveiling Marine Majesty"}
                 img={NaturalPhenomenonImg}
             ></ServiceCategory>
             {/*City Phenomena */}
             <ServiceCategory
                 items={City}
-                title={"Embark on Wild Safaris: Unveiling Nature's Majesty"}
+                title={"Rome Around The Most Luxuries Citys: Unveiling City Majesty"}
                 img={CityImg}
             ></ServiceCategory>
 

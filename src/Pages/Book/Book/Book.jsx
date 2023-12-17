@@ -15,8 +15,9 @@ const Book = () => {
 
      const { type } = useParams();
      const initialIndex = types.indexOf(type);
-     const [tabIndex, setTabIndex] = useState(initialIndex);
+     const [tabIndex, setTabIndex] = useState(0 || initialIndex);
      const [services] = useService();
+     // const [defaultSet, setDefaultset] = useState();
      const Mountain = services.filter(item => item.type === 'Mountains');
      const Camping = services.filter(item => item.type === 'Camping');
      const River = services.filter(item => item.type === 'River');

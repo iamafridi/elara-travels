@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
         <div className="flex">
             {/* Dashboard Side Bar */}
-            <div className="w-64 min-h-screen bg-gray-600">
+            <div className="w-64 min-h-screen text-gray-50 bg-gray-600">
                 <ul className="menu p-4">
                     {
                         isAdmin ? <>
@@ -28,7 +28,7 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/manageItems"> <FaList /> Manage Items</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/bookings"> <FaAd />Manage Bookings</NavLink>
+                                <NavLink to="/dashboard/cart"> <FaAd />Manage Bookings</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/users"> <FaUsers /> All Users</NavLink>
@@ -42,7 +42,7 @@ const Dashboard = () => {
                                 <NavLink to="/book/Mountain"> <FaSearch />Book Trip</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/book/contact"> <FaEnvelope /> Contact</NavLink>
+                                <NavLink to="contact"> <FaEnvelope /> Contact</NavLink>
                             </li></>
                             :
                             <>
@@ -70,10 +70,15 @@ const Dashboard = () => {
                                     <NavLink to="/book/Mountain"> <FaSearch />Book Trip</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/book/contact"> <FaEnvelope /> Contact</NavLink>
+                                    <NavLink to="contact"> <FaEnvelope /> Contact</NavLink>
                                 </li></>
                     }
+                    
                 </ul>
+                <div className="m-2 p-2 mt-20">
+                        <img src="https://i.ibb.co/T1pt0NY/loginb-removebg-preview.png" className=" h-[25vh]"  alt="" />
+                   <button className="btn btn-md w-full">Invite a friend</button>
+                    </div>
             </div>
 
             <div className="flex-1 p-10">

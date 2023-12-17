@@ -3,10 +3,10 @@ const Footer = () => {
     return (
         <div>
             
-<footer className="bg-gray-900">
+<footer className="bg-gray-800 text-gray-50 rounded-ss-xl rounded-se-xl">
   <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-md">
-      <strong className="block text-center text-xl font-bold text-gray-900 sm:text-3xl">
+      <strong className="block text-center text-xl font-bold text-gray-50 sm:text-3xl">
         Want us to email you with the latest blockbuster news?
       </strong>
 
@@ -32,13 +32,13 @@ const Footer = () => {
 
     <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
       <div className="mx-auto max-w-sm lg:max-w-none">
-        <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+        <p className="mt-4 text-center text-gray-50 lg:text-left lg:text-lg">
          Explore the world of books with the Elara Library.
         </p>
 
         <div className="mt-6 flex justify-center gap-4 lg:justify-start">
           <a
-            className="text-gray-700 transition hover:text-gray-700/75"
+            className="text-gray-50 transition hover:text-gray-50/75"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -55,7 +55,7 @@ const Footer = () => {
           </a>
 
           <a
-            className="text-gray-700 transition hover:text-gray-700/75"
+            className="text-gray-50 transition hover:text-gray-50/75"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -72,7 +72,7 @@ const Footer = () => {
           </a>
 
           <a
-            className="text-gray-700 transition hover:text-gray-700/75"
+            className="text-gray-50 transition hover:text-gray-50/75"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -87,7 +87,7 @@ const Footer = () => {
           </a>
 
           <a
-            className="text-gray-700 transition hover:text-gray-700/75"
+            className="text-gray-50 transition hover:text-gray-50/75"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -104,7 +104,7 @@ const Footer = () => {
           </a>
 
           <a
-            className="text-gray-700 transition hover:text-gray-700/75"
+            className="text-gray-50 transition hover:text-gray-50/75"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -124,27 +124,27 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
         <div>
-          <strong className="font-medium text-gray-900"> Services </strong>
+          <strong className="font-medium text-gray-50"> Services </strong>
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Marketing </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> Marketing </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/">
                 Graphic Design
               </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/">
                 App Development
               </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/">
                 Web Development
               </a>
             </li>
@@ -152,41 +152,41 @@ const Footer = () => {
         </div>
 
         <div>
-          <strong className="font-medium text-gray-900"> About </strong>
+          <strong className="font-medium text-gray-50"> About </strong>
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> About </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> About </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Careers </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> Careers </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> History </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> History </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Our Team </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> Our Team </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <strong className="font-medium text-gray-900"> Support </strong>
+          <strong className="font-medium text-gray-50"> Support </strong>
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> FAQs </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> FAQs </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Contact </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> Contact </a>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Live Chat </a>
+              <a className="text-gray-50 transition hover:text-gray-50/75" href="/"> Live Chat </a>
             </li>
           </ul>
         </div>
@@ -194,13 +194,13 @@ const Footer = () => {
     </div>
 
     <div className="mt-16 border-t border-gray-100 pt-8">
-      <p className="text-center text-xs/relaxed text-gray-500">
+      <p className="text-center text-xs/relaxed text-gray-200">
         © Elara Library 2023. All rights reserved.
 
         <br />
 
         Created By
-        <a href="" className="text-gray-700 ml-3 underline transition hover:text-gray-700/75"> Afridi Akbar Ifty</a>
+        <a href="" className="text-gray-50 ml-3 underline transition hover:text-gray-50/75"> Afridi Akbar Ifty</a>
          
       </p>
     </div>

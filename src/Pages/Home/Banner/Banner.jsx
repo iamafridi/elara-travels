@@ -13,30 +13,30 @@ import banner8 from '../../../assets/Banner/banner8.jpeg'
 const Banner = () => {
     return (
         <Carousel>
-              <div>
-                <img  src={banner3} />
+            <div>
+                <img src={banner3} />
             </div>
             <div>
-                <img  src={banner4} />
+                <img src={banner4} />
             </div>
             <div>
-                <img  src={banner5} />
+                <img src={banner5} />
             </div>
             <div>
-                <img  src={banner1} />
+                <img src={banner1} />
             </div>
             <div>
-                <img  src={banner2} />
+                <img src={banner2} />
             </div>
-          
+
             <div>
-                <img  src={banner6} />
-            </div>
-            <div>
-                <img  src={banner7} />
+                <img src={banner6} />
             </div>
             <div>
-                <img  src={banner8} />
+                <img src={banner7} />
+            </div>
+            <div>
+                <img src={banner8} />
             </div>
         </Carousel>
     );
