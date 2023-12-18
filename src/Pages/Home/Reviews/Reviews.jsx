@@ -8,14 +8,14 @@ import { Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
-
+import { BiSolidQuoteSingleRight } from "react-icons/bi";
 
 
 const Reviews = () => {
 
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://elara-travels-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -31,6 +31,7 @@ const Reviews = () => {
                 {
                     reviews.map(review => <SwiperSlide key={review.id}>
                         <div className='flex flex-col items-center mx-24 my-16'>
+                        <BiSolidQuoteSingleRight className='text-9xl' />
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}

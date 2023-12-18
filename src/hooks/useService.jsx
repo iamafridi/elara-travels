@@ -9,7 +9,7 @@ const useService = () => {
     // const [loading,setLoading] =useState(true);
 
     //     useEffect(() => {
-    //         fetch('http://localhost:5000/services')
+    //         fetch('https://elara-travels-server.vercel.app/services')
     //             .then(res => res.json())
     //             .then(data => {
     //                 setServices(data);
